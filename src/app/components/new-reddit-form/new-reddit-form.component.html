@@ -1,1 +1,21 @@
-<p>new-reddit-form works!</p>
+<form [formGroup]="redditForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+        <mat-card-title>Add a Link</mat-card-title>
+        <div>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Title" formControlName="title">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Link" formControlName="link">
+            </mat-form-field>
+        </div>
+        <div>
+            <button type="submit" mat-raised-button color="primary">Submit Link</button>
+        </div>
+    </mat-card>
+    <pre>
+        {{redditForm.value | json}}
+    </pre>
+</form>
