@@ -1,1 +1,13 @@
-<p>reddit-item works!</p>
+<mat-card id="{{reddit.id}}">
+    <mat-card-header>
+        <mat-card-title>{{reddit.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Votes: {{reddit.votes}}</p>
+        <p><a href="{{reddit.link}}" target="blank">{{reddit.link}}</a></p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onUpvoteClick(reddit.id)">Upvote</button>
+        <button mat-raised-button color="accent" (click)="onDownvoteClick(reddit.id)">Downvote</button>
+    </mat-card-actions>
+</mat-card>

@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.redditsSubs = this.redditService.reddits.subscribe(reddits => {
-      this.reddits = reddits
+      this.reddits = reddits;
     });
   }
 

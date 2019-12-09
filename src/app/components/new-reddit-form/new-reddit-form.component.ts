@@ -27,7 +27,10 @@ export class NewRedditFormComponent implements OnInit {
     this.redditService.updateRedditsList(Object.assign(
       {},
       this.redditForm.value,
-      { id: `${new Date().getTime()}-${this.redditForm.get('title').value.split(' ').join('-').toLowerCase()}` }
+      {
+        id: `${new Date().getTime()}-${this.redditForm.get('title').value.split(' ').join('-').toLowerCase()}`,
+        votes: 0,
+      }
     ));
     this.redditForm.reset();
   }

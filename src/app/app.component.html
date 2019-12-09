@@ -8,7 +8,4 @@
 </mat-toolbar>
 
 <app-new-reddit-form></app-new-reddit-form>
-
-<app-reddit-list></app-reddit-list>
-
-{{reddits | json}}
+<app-reddit-list [reddits]="reddits"></app-reddit-list>
